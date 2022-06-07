@@ -1,4 +1,4 @@
-<h1 align="center">Lottery</h1>
+<h1 align="center">BookStore</h1>
 
 ## Description
 This program simulates a person playing the lottery. Allows the user to purchase either a powerball or megamillions ticket. This program 
@@ -26,9 +26,13 @@ them to fit the criteria of the Megamillions rules.
 
 ## Outcome
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/80684500/171483687-1bd3d43e-2bfe-43e4-8899-c6465e33d69f.JPG" alt="Sublime's custom image"/>
-  <img src="https://user-images.githubusercontent.com/80684500/171483689-915128d6-7bcc-4e3b-be2d-6619d0bff69a.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482132-f464fb59-c15c-49ce-84eb-28a2f45cd1f0.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482134-f5274622-9dcd-4417-b26e-772d94a0d019.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482135-583b9a71-ee85-4433-85be-54ae0ce2ddb0.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482136-c511aa35-927c-41c0-8fee-505b17b1ed53.JPG" alt="Sublime's custom image"/>
   <img src="https://user-images.githubusercontent.com/80684500/171483691-10454eb1-6cc3-41b4-9f17-3733df734d76.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482138-488d260f-3072-438c-bcaa-61019c4c2520.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172482139-36c30ba3-2091-4102-89fb-5a625b8ddb33.JPG" alt="Sublime's custom image"/>
 </p>
 
 ## Projects
@@ -41,4 +45,3 @@ them to fit the criteria of the Megamillions rules.
 |   5   | [Grader](https://github.com/JamesSmith232/Grader)                                                       | [James Smith](https://github.com/JamesSmith232)   |
 |   6   | [StoreManager](https://github.com/JamesSmith232/StoreManager)                                           | [James Smith](https://github.com/JamesSmith232)   |
 |   7   | [TicTacToe](https://github.com/JamesSmith232/TicTacToe)                                                 | [James Smith](https://github.com/JamesSmith232)   |
-
