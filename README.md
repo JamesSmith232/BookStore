@@ -30,7 +30,7 @@ them to fit the criteria of the Megamillions rules.
   <img src="https://user-images.githubusercontent.com/80684500/172482134-f5274622-9dcd-4417-b26e-772d94a0d019.JPG" alt="Sublime's custom image"/>
   <img src="https://user-images.githubusercontent.com/80684500/172482135-583b9a71-ee85-4433-85be-54ae0ce2ddb0.JPG" alt="Sublime's custom image"/>
   <img src="https://user-images.githubusercontent.com/80684500/172482136-c511aa35-927c-41c0-8fee-505b17b1ed53.JPG" alt="Sublime's custom image"/>
-  <img src="https://user-images.githubusercontent.com/80684500/171483691-10454eb1-6cc3-41b4-9f17-3733df734d76.JPG" alt="Sublime's custom image"/>
+  <img src="https://user-images.githubusercontent.com/80684500/172483280-96f4f3aa-8d17-4c21-ad3b-6388ddf695cf.JPG" alt="Sublime's custom image"/>
   <img src="https://user-images.githubusercontent.com/80684500/172482138-488d260f-3072-438c-bcaa-61019c4c2520.JPG" alt="Sublime's custom image"/>
   <img src="https://user-images.githubusercontent.com/80684500/172482139-36c30ba3-2091-4102-89fb-5a625b8ddb33.JPG" alt="Sublime's custom image"/>
 </p>
