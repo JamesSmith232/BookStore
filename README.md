@@ -1,28 +1,14 @@
 <h1 align="center">BookStore</h1>
 
 ## Description
-This program simulates a person playing the lottery. Allows the user to purchase either a powerball or megamillions ticket. This program 
-uses inheritance to increase the reusability of code from other classes. I will include detailed notes inside each file explaining what 
-each part does. 
+This program uses a GUI to allow a Book Store owner to add, search, store, and display their inventory. I will include
+detailed notes inside each file explaining the logic behind the code.
 
-This program has five different classes: Lottery, LotteryTicket, LotteryGame, Powerball, and Megamillions.
- - **_Lottery:_** this class is the application of the Lottery subclasses. This will create all of the menus, allow the 
-user to purchase their lottery tickets, and generate the winning numbers. When a user "purchases" a ticket, this class will 
-use the respect subclass and set up the ticket using the rules defined by either powerball or megamillions. Checks to 
-see if the users ticket is a winner.
- - **_LotteryTicket:_** this class represents purchasing a lottery ticket. Inside this class, it refrences the current object 
-to create a powerball or megamillion ticket. It takes the users picks, sorts them and converts them to a string varaible. 
-- **_LotteryGame:_** is an abstract superclass for the the two following classes PowerBall and MegaMillions. The reason we use
-an abstract class like this is because both powerball and megamillions have different aspects about each, but both fall under
-a lottery ticket. A powerball's max pick is 69 and the megamillions max pick is 75, but they each have a max pick. The purpose 
-of a abstract class is to be used as a base for their subclasses. This class does use a getPicks(), isRepeat(), and countMatches()
-methods since this can be used for each subclass.
-- **_PowerBall:_** one of the subclasses for abstract class LotteryGame. Using inheritance, this allows reusing of fields and methods 
-without having to write extra code. The class Powerball uses getAmountWon(), quickPickTicket(), and userPickTicket() methods. These 
-three are also found in the next subclass, but since Powerball and Megamillions has different rules they abide under. These methods 
-will differ slightly. 
-- **_MegaMillions:_** the last subclass for abstract class LotteryGame. Similar to Powerball, it uses the same methods but changes 
-them to fit the criteria of the Megamillions rules. 
+This program has five different classes: BookStoreGUI, Catalog, BookStoreItem, Book, CD, and DVD.
+ - **_BookStoreGUI:_** Sets up the GUI by importing different javafx packages. 
+ - **_Catalog:_** 
+- **_BookStoreItem:_** 
+- **_Book, CD, DVD:_**  
 
 ## Outcome
 <p align="center">
