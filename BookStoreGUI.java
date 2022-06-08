@@ -41,7 +41,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class BookStoreGUI extends Application {
-	
+		
     private Label titleLabel; 
     private Label authorLabel;
     private Label priceLabel;
@@ -145,13 +145,15 @@ public class BookStoreGUI extends Application {
     	inputSP.getItems().add(mainBP);
     	inputSP.getItems().add(rightBP);
 		
+	//setOnAction() is used to make a button do something when clicked 
      	listener = new BookStoreListener();
      	loadMenuItem.setOnAction(listener);	
 	saveMenuItem.setOnAction(listener);
      	addMenuItem.setOnAction(listener);
      	displayMenuItem.setOnAction(listener);
      	searchMenuItem.setOnAction(listener);
-		
+	
+	//sets the scene and creates the size of the window 
 	scene = new Scene(inputSP, 500, 500);
 	
 	primaryStage.setTitle("Book Store");
@@ -159,15 +161,19 @@ public class BookStoreGUI extends Application {
 	primaryStage.show();  
     } //end of start() method
 	
+	
     private void setUpInputControls() {
+	//used to describe the textfield 
     	titleLabel = new Label("Title");
     	authorLabel = new Label("Author");
     	priceLabel = new Label("Price");
-    
+    	
+	//place to add the entries
     	titleTF = new TextField();
     	authorTF = new TextField();
     	priceTF = new TextField();
     	
+	//a GridPane lays out items within a flexible grid of rows and columns
     	inputGP = new GridPane();
     	inputGP.setHgap(10); 
     	inputGP.setVgap(10); 
@@ -182,6 +188,7 @@ public class BookStoreGUI extends Application {
     } //end of setupInputControls() method
 	
     private void setUpRB() {
+	//creates the radioButtons that will be used to distinguish between items 
     	bookRB = new RadioButton("Book");
     	cdRB = new RadioButton("  CD");
     	dvdRB = new RadioButton("DVD");
@@ -191,6 +198,7 @@ public class BookStoreGUI extends Application {
     	cdRB.setToggleGroup(itemTypeGroup);
     	dvdRB.setToggleGroup(itemTypeGroup);
     	
+	//creates a vertical column for the radio buttons
     	sizeVB = new VBox(10);
     	sizeVB.setAlignment(Pos.CENTER);
     	sizeVB.setSpacing(20);
@@ -203,22 +211,26 @@ public class BookStoreGUI extends Application {
     	clearButton = new Button("Clear");
     	exitButton = new Button("Exit");
     	
+	//creates a vertical column for the buttons
     	buttonVB = new VBox(10);
     	buttonVB.setAlignment(Pos.CENTER);
     	buttonVB.getChildren().add(clearButton);
     	buttonVB.getChildren().add(exitButton);	
-    
+    	
+	//gives an action for the clear button, which will set each textfield and textarea to ""
     	clearButton.setOnAction(ae -> {
             titleTF.setText("");
             authorTF.setText("");
             priceTF.setText("");
             outputTA.setText("");
     	});
+	//gives the exit button the action of closing out of the GUI
     	exitButton.setOnAction(ae -> { System.exit(0); });
     }
 	
     private class BookStoreListener implements EventHandler<ActionEvent> {
 	
+	//Event Handling controls the event and decides what happen with each item 
 	public void handle(ActionEvent e) {
             if (e.getSource() == loadMenuItem) loadFile();
             else if (e.getSource() == saveMenuItem) saveFile();
@@ -228,6 +240,8 @@ public class BookStoreGUI extends Application {
 		author = authorTF.getText();
 		price = Double.parseDouble(priceTF.getText());
 		if (bookRB.isSelected()) {
+			//if book radiobutton is selected, it will create a book object and add it to the 
+			//store catalog (array). The same goes for the other two radiobuttons
 			book = new Book(title, author, price); 
 			storeCatalog.add(book);
 			count++;
@@ -251,6 +265,7 @@ public class BookStoreGUI extends Application {
         	priceTF.setText("");				
             }
             else if (e.getSource() == displayMenuItem) {
+		//clears the main textarea and prints out all that is in the catalog array
                 outputTA.setText("");
                 for (int i = 0; i < count; i++) {
                     outputTA.appendText("\n" + storeCatalog.getList()[i].toString());
@@ -265,15 +280,17 @@ public class BookStoreGUI extends Application {
 	PrintWriter outputWriter = null; 
 		
 	try { 
-            //Might need to update the file path for the output and input files
+            //creates a new text file in the same folder as the program
             outputFile = new File("E:/Java/Bookstore/inventory.txt");
             outputWriter = new PrintWriter(outputFile);
-            outputTA.setText("");	
+            outputTA.setText("");
+	    //goes through catalog array and prints out every item in the new text file 
             for (int i = 0; i < count; i++) {
         	outputWriter.println("\n" + storeCatalog.getList()[i].toString());
             } 
             outputTA.appendText("\nItem Saved!");
         }
+	//attemps to catch this error to prevent the program from stopping 
         catch (FileNotFoundException fnfe) {
             outputTA.setText("");	
             outputTA.setText("\nCould not open the file for writing.");	
@@ -286,6 +303,7 @@ public class BookStoreGUI extends Application {
         Scanner inputReader = null; 
 		
         try {	
+	    //takes the inventory.txt file and prints it out in the main text area
             inputFile = new File("E:/Java/Bookstore/inventory.txt");
             outputTA.setText("");	
             outputTA.appendText("\nAttempting to open up the library...");
@@ -294,6 +312,7 @@ public class BookStoreGUI extends Application {
             	outputTA.appendText("\n" + inputReader.nextLine());
             }
         }
+	////attemps to catch this error to prevent the program from stopping 
         catch (FileNotFoundException fnfe) {
             outputTA.setText("");	
             outputTA.appendText("\nNo items currently in the library. Add some if you like!");
@@ -304,7 +323,9 @@ public class BookStoreGUI extends Application {
     private void searchItem() {
     	String title = titleTF.getText();
     	boolean found = false;
-    
+        
+	//searches for the title name within the catalog array and prints out the results inside 
+	//the main text area 
     	if (storeCatalog.isAvailable(title) == true) {
             outputTA.setText("");
             outputTA.appendText("\nTitle found: " + title);
