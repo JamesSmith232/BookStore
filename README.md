@@ -5,10 +5,14 @@ This program uses a GUI to allow a Book Store owner to add, search, store, and d
 detailed notes inside each file explaining the logic behind the code.
 
 This program has five different classes: BookStoreGUI, Catalog, BookStoreItem, Book, CD, and DVD.
- - **_BookStoreGUI:_** Sets up the GUI by importing different javafx packages. 
- - **_Catalog:_** 
-- **_BookStoreItem:_** 
-- **_Book, CD, DVD:_**  
+ - **_BookStoreGUI:_** Sets up the GUI by importing different javafx packages. Uses three methods setupInputControls(), 
+ setupRB(), and setupButtons() to allow the GUI to function like it is supposed to. Uses the saveFile() and the loadFile() 
+ to import and export inventory to a txt file that is in the same folder as the programs.
+ - **_Catalog:_** represents the inventory for the bookstore, it stores all of the entries made by the owner. It also allows 
+for the owner to search and check the availability of the item. 
+- **_BookStoreItem:_** the abstract method that is the parent to the following methods. Creates the object that the other three
+will implement.
+- **_Book, CD, DVD:_** these three classes extend BookStoreItem and represents each of their respective types 
 
 ## Outcome
 <p align="center">
