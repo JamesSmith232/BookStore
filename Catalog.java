@@ -7,10 +7,12 @@ Catalog represents the inventory for the book store
 **/
 
 public class Catalog {
+    //creates the BookStoreItem array to be used as inventory
     private BookStoreItem[] inventory; 
     private final int MAX = 100; 
     private int count;
     
+    //initializes array 
     public Catalog() {
         inventory = new BookStoreItem[MAX];
         count = 0; 
@@ -27,6 +29,9 @@ public class Catalog {
         boolean found = false; 
         
         for (int i = 0; i < count && !found; i++) {
+            //.equals compares two strings and either returns true or false.
+            //so the passed title parameter will be compared with every title in the array 
+            //which will return true if one ever matches
             if (title.equals(inventory[i].getTitle())) found = true;
         }
         
@@ -38,6 +43,8 @@ public class Catalog {
         BookStoreItem desiredItem = null; 
         boolean found = false; 
         
+        //same process as the isAvailable method, but initializes the desireItem varaible 
+        //with whatever is at that index of the array 
         for (int i = 0; i < count && !found; i++) {
             if (title.equals(inventory[i].getTitle())) {
                 desiredItem = inventory[i]; 
